@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: yiyangpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: yiyangpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: yiyangpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: yiyangpipelinesjavascriptdocker 
+          image: devopsyang.azurecr.io/yiyangpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
